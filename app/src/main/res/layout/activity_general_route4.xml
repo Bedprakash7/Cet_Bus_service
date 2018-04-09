@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GeneralRoute4"
+    android:background="@drawable/backgroundimage"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/route13"
+        android:id="@+id/route4"
+        android:onClick="imageClicked"
+        android:padding="10dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/map13"
+        android:id="@+id/map4"
+        android:padding="10dp"
+        android:alpha="0"
+        android:onClick="imageClicked"
+        />
+</RelativeLayout>

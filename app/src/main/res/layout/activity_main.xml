@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundimage"
+    >
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:src="@drawable/cetlogo"
+        android:id="@+id/cetlogo"
+        />
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/cetlogo"
+        android:src="@drawable/icon" />
+
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="220sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif-monospace"
+        android:padding="10sp"
+        android:text="CET BUS SERVICES"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="65sp" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="87dp"
+
+        android:background="#11000000"
+        android:paddingVertical="15dip"
+        android:paddingHorizontal="3dip"
+        >
+
+        <Button
+            android:id="@+id/Student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:onClick="studentClicked"
+            android:text="Student/Faculty"
+            android:textColor="#000000"
+            />
+
+        <Button
+            android:id="@+id/Admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="22dp"
+            android:onClick="adminClicked"
+            android:text="Admin"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+</RelativeLayout>
