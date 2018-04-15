@@ -8,12 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
+   
 
 public class AdminLogin extends AppCompatActivity {
     Button login;
     EditText username, password;
-    //private FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +21,14 @@ public class AdminLogin extends AppCompatActivity {
         login=(Button)findViewById(R.id.login);
         username =(EditText)findViewById(R.id.userName);
         password =(EditText)findViewById(R.id.password);
-        //firebaseAuth = FirebaseAuth.getInstance();
-        //firebaseAuth.createUserWithEmailAndPassword()
+
 
     }
 
+    public void forgetPasswordClicked(View view){
+        Intent i=new Intent(AdminLogin.this, ForgetPassword.class);
+        startActivity(i);
+    }
     public void loginClicked(View view) {
         String un, pw;
         un = username.getText().toString();

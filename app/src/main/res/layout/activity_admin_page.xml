@@ -11,25 +11,194 @@
         android:layout_height="45sp"
         android:layout_margin="10dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Welcome S. K. BISOI Sir"
+        android:text="Welcome"
         android:textSize="30sp"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:id="@+id/welcomeAdmin"
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100sp"
-        android:layout_below="@id/welcomeAdmin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="60dp"
-        android:text="CET BUS SERVICE PORTAL"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:gravity="center"
+        android:layout_marginTop="77dp"
         android:background="@color/colorAccent"
-        android:layout_marginTop="40sp"
+        android:gravity="center"
+        android:text="CET BUS SERVICE PORTAL"
 
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/timingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="219dp"
+        android:text="Timing"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:text="9:30AM"
+        android:id="@+id/firstTime"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timingTV"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="99dp"
+        android:onClick="firstTimeClicked"
         />
 
+    <Button
+        android:layout_width="60dp"
+        android:text="2:10PM"
+        android:id="@+id/secondTime"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timingTV"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/firstTime"
+        android:onClick="secondTimeClicked"
+        />
+
+    <Button
+        android:layout_width="60dp"
+        android:text="4:45PM"
+        android:id="@+id/thirdTime"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timingTV"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@id/secondTime"
+        android:onClick="thirdTimeClicked"
+        />
+
+    <TextView
+        android:id="@+id/routeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timingTV"
+        android:layout_marginTop="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/timingTV"
+        android:layout_marginBottom="249dp"
+        android:text="Route"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignStart="@+id/firstTime"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="1"
+        android:id="@+id/routeOne"
+        android:onClick="routeOneClicked"
+        />
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="2"
+        android:layout_toRightOf="@id/routeOne"
+        android:id="@+id/routeTwo"
+        android:onClick="routeTwoClicked"
+        />
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="3"
+        android:layout_toRightOf="@id/routeTwo"
+        android:id="@+id/routeThree"
+        android:onClick="routeThreeClicked"
+        />
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="4"
+        android:layout_toRightOf="@id/routeThree"
+        android:id="@+id/routeFour"
+        android:onClick="routeFourClicked"
+        />
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="5"
+        android:layout_toRightOf="@id/routeFour"
+        android:id="@+id/routeFive"
+        android:onClick="routeFiveClicked"
+        />
+    <Button
+        android:layout_width="35sp"
+        android:layout_height="50sp"
+        android:layout_alignTop="@+id/routeTV"
+        android:text="6"
+        android:layout_toRightOf="@id/routeFive"
+        android:id="@+id/routeSix"
+        android:onClick="routeSixClicked"
+        />
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/busOneET"
+        android:layout_toEndOf="@+id/routeFive"
+        android:onClick="resetClicked"
+        android:text="RESET" />
+
+    <EditText
+        android:id="@+id/busOneET"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/timingTV"
+        android:layout_marginBottom="188dp"
+        android:hint="First Bus" />
+
+    <Button
+        android:id="@+id/busOneAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/reset"
+        android:layout_toEndOf="@+id/firstTime"
+        android:text="Add"
+        android:onClick="firstBusAddClicked"
+        />
+
+    <EditText
+        android:id="@+id/busTwoET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timingTV"
+        android:layout_below="@+id/reset"
+        android:hint="Second Bus" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/busTwoET"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/busTwoET"
+        android:layout_marginLeft="40dp"
+        android:text="Add"
+        android:id="@+id/busTwoAdd"
+        android:onClick="secondBusAddClicked"
+        />
+
+    <TextView
+        android:id="@+id/showBuses"
+        android:layout_width="311dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Buses plying:" />
 
 </RelativeLayout>

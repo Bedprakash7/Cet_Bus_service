@@ -17,7 +17,9 @@
         android:layout_marginBottom="28dp"
         android:background="#11000000"
         android:textColor="#fff"
-        android:text="Forgot Password?" />
+        android:text="Forgot Password?"
+        android:onClick="forgetPasswordClicked"
+        />
 
     <ImageView
         android:id="@+id/imageView"

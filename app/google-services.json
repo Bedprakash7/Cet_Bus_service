@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "743419855819",
+    "firebase_url": "https://cet-bus-services.firebaseio.com",
+    "project_id": "cet-bus-services",
+    "storage_bucket": "cet-bus-services.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743419855819:android:566a6a0e9491caa5",
+        "android_client_info": {
+          "package_name": "com.example.souravkumarbehera.cetbusservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743419855819-d17tssdt0775gvknovvsa6pdg4725de7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.souravkumarbehera.cetbusservice",
+            "certificate_hash": "3c1fb2ff40c23e15b32a25e60b289262cf1d88ff"
+          }
+        },
+        {
+          "client_id": "743419855819-j6ot1tft3tjoe9a0r4jbrm12uagkgj1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB2uNkAFNFcL_e_FTRYEbiBuzJ7ctK94Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743419855819-j6ot1tft3tjoe9a0r4jbrm12uagkgj1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
