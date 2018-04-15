@@ -37,6 +37,7 @@ public class AdminLogin extends AppCompatActivity {
         if (un.equals("skbisoi@cetb") && pw.equals("cetb1234")) {
             Intent next = new Intent(AdminLogin.this, AdminPage.class);
             startActivity(next);
+            password.setText("");
         }
         else{
             count++;
