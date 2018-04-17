@@ -4,11 +4,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class GeneralRoute2 extends AppCompatActivity {
     int count=0;
+    Calendar calendar;
+    SimpleDateFormat simpleDateFormat;
+    TextView detailHeader;
+    String nowTime,firstTime="9:30",secondTime="14:10", thirdTime="16:45";
+    Date now,firsttime,secondtime,thirdtime;
     ImageView cat1;
     ImageView cat2;
+    private Date parseDate(String date) {
+
+        try {
+            return simpleDateFormat.parse(date);
+        } catch (java.text.ParseException e) {
+            return new Date(0);
+        }
+    }
     public void imageClicked(View view)
     {
 
@@ -45,5 +63,25 @@ public class GeneralRoute2 extends AppCompatActivity {
         setContentView(R.layout.activity_general_route2);
         cat1=(ImageView)findViewById(R.id.route2);
         cat2=(ImageView)findViewById(R.id.map2);
+        detailHeader=(TextView)findViewById(R.id.detailHeader);
+        calendar= Calendar.getInstance();
+        simpleDateFormat = new SimpleDateFormat("HH:MM");
+        //nowTime = simpleDateFormat.format(calendar.getTime());
+        int hour= calendar.get(Calendar.HOUR);
+        int min= calendar.get(Calendar.MINUTE);
+        now = parseDate(hour + ":" + min);
+        firsttime=parseDate(firstTime);
+        secondtime=parseDate(secondTime);
+        thirdtime=parseDate(thirdTime);
+
+        if(firsttime.before(now) && thirdtime.after(now)){
+            detailHeader.setText("9:30 Leaving Kalinga Studio to KIIT Square");
+        }
+        else if(secondtime.before(now) && firsttime.after(now)){
+            detailHeader.setText("14:10 Leaving Kalinga Studio to KIIT Square");
+        }
+        else{
+            detailHeader.setText("16:45 Leaving Kalinga Studio to KIIT Square");
+        }
     }
 }
