@@ -42,7 +42,7 @@ public class AdminLogin extends AppCompatActivity {
         else{
             count++;
             Toast.makeText(getApplicationContext(),"wrong username or password", Toast.LENGTH_SHORT).show();
-            if(count>=5){
+            if(count==5){
                 Intent back =new Intent(AdminLogin.this, MainActivity.class);
                 startActivity(back);
             }

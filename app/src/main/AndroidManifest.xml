@@ -3,11 +3,18 @@
     package="com.example.souravkumarbehera.cetbusservice">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,7 +39,81 @@
         <activity android:name=".GeneralRoute6" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".AdminPage" />
-        <activity android:name=".ForgetPassword"></activity>
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".DriverLogin" />
+        <activity android:name=".Driver1Page" />
+        <activity android:name=".Driver2Page" />
+        <activity android:name=".Driver3Page" />
+        <activity android:name=".Driver4Page" />
+        <activity android:name=".Driver5Page" />
+        <activity android:name=".Driver6Page" />
+        <activity android:name=".Driver7Page" />
+        <activity android:name=".Driver8Page" />
+        <activity android:name=".Driver9Page" />
+        <activity android:name=".Driver10Page" />
+        <activity android:name=".Driver11Page" />
+        <activity android:name=".Driver12Page" />
+        <activity android:name=".Driver13Page" />
+        <activity android:name=".Driver14Page" />
+        <activity android:name=".Driver15Page" />
+        <activity android:name=".DriverForgetPassword" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Driver1Map"
+            android:label="@string/title_activity_driver1_map" />
+        <activity
+            android:name=".Driver2Map"
+            android:label="@string/title_activity_driver2_map" />
+        <activity
+            android:name=".Driver3Map"
+            android:label="@string/title_activity_driver3_map" />
+        <activity
+            android:name=".Driver4Map"
+            android:label="@string/title_activity_driver4_map" />
+        <activity
+            android:name=".Driver5Map"
+            android:label="@string/title_activity_driver5_map" />
+        <activity
+            android:name=".Driver6Map"
+            android:label="@string/title_activity_driver6_map" />
+        <activity
+            android:name=".Driver7Map"
+            android:label="@string/title_activity_driver7_map" />
+        <activity
+            android:name=".Driver8Map"
+            android:label="@string/title_activity_driver8_map" />
+        <activity
+            android:name=".Driver9Map"
+            android:label="@string/title_activity_driver9_map" />
+        <activity
+            android:name=".Driver10Map"
+            android:label="@string/title_activity_driver10_map" />
+        <activity
+            android:name=".Driver11Map"
+            android:label="@string/title_activity_driver11_map" />
+        <activity
+            android:name=".Driver12Map"
+            android:label="@string/title_activity_driver12_map" />
+        <activity
+            android:name=".Driver13Map"
+            android:label="@string/title_activity_driver13_map" />
+        <activity
+            android:name=".Driver14Map"
+            android:label="@string/title_activity_driver14_map" />
+        <activity
+            android:name=".Driver15Map"
+            android:label="@string/title_activity_driver15_map"></activity>
     </application>
 
 </manifest>

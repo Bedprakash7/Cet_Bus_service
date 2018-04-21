@@ -14,4 +14,19 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_driver1_map">Map</string>
+    <string name="title_activity_driver2_map">Map</string>
+    <string name="title_activity_driver3_map">Map</string>
+    <string name="title_activity_driver4_map">Map</string>
+    <string name="title_activity_driver5_map">Map</string>
+    <string name="title_activity_driver6_map">Map</string>
+    <string name="title_activity_driver7_map">Map</string>
+    <string name="title_activity_driver8_map">Map</string>
+    <string name="title_activity_driver9_map">Map</string>
+    <string name="title_activity_driver10_map">Map</string>
+    <string name="title_activity_driver11_map">Map</string>
+    <string name="title_activity_driver12_map">Map</string>
+    <string name="title_activity_driver13_map">Map</string>
+    <string name="title_activity_driver14_map">Map</string>
+    <string name="title_activity_driver15_map">Map</string>
 </resources>

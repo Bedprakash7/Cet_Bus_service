@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void driverClicked(View view){
+        Intent driver1 = new Intent(MainActivity.this, DriverLogin.class);
+        startActivity(driver1);
+    }
     public void studentClicked(View v) {
         Intent Student1 = new Intent(MainActivity.this, ListOfGeneralBuses.class);
         startActivity(Student1);
