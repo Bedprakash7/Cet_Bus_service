@@ -80,7 +80,7 @@
             android:paddingHorizontal="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <!--
+
         <Button
             android:id="@+id/mapButton1"
             android:layout_width="wrap_content"
@@ -90,7 +90,9 @@
             android:background="#D2486F"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="3dp"
-            android:text="Locate" />
+            android:text="Locate"
+            android:onClick="mapButton1Clicked"
+            />
 
         <Button
             android:id="@+id/mapButton2"
@@ -102,8 +104,9 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="3dp"
             android:background="#D2486F"
+            android:onClick="mapButton2Clicked"
             />
-            -->
+
     </RelativeLayout>
     <Button
         android:id="@+id/get"

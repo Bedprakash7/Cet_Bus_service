@@ -113,7 +113,7 @@ public class DriverLogin extends AppCompatActivity {
             startActivity(next);
             password.setText("");
         }
-        else if (un.equals("Bus15cetb") && pw.equals("cetb@15")) {
+        else if (un.equals("Bus15@cetb") && pw.equals("cetb@15")) {
             Toast.makeText(DriverLogin.this, "Bus 15 Driver", Toast.LENGTH_SHORT).show();
             Intent next = new Intent(DriverLogin.this, Driver15Page.class);
             startActivity(next);

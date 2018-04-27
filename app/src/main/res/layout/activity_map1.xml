@@ -6,36 +6,27 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Driver7Map" >
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|top"
-        android:text="GO OFFLINE"
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"
-        android:id="@+id/offline"
-        android:onClick="goOfflineClicked"
-        />
+    tools:context=".Map1" >
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:text="7"
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Get online"
+        android:text="No Bus"
         android:padding="10dp"
         android:layout_marginTop="20dp"
         android:paddingRight="10dp"
-        android:id="@+id/online"
-        android:onClick="mapGetOnline"
+        android:id="@+id/showBusNo"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:text=""
+        android:textColor="#000000"
 
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/status"
+        />
 </fragment>

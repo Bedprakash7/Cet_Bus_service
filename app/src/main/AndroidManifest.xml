@@ -10,6 +10,10 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyBDGUo20NYAMPmtbAof_aHrSXTZ940H3E0" />
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -113,7 +117,13 @@
             android:label="@string/title_activity_driver14_map" />
         <activity
             android:name=".Driver15Map"
-            android:label="@string/title_activity_driver15_map"></activity>
+            android:label="@string/title_activity_driver15_map" />
+        <activity
+            android:name=".Map1"
+            android:label="@string/title_activity_map1" />
+        <activity
+            android:name=".StudentViewMap"
+            android:label="@string/title_activity_student_view_map"></activity>
     </application>
 
 </manifest>

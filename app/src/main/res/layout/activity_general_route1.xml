@@ -95,9 +95,9 @@
 
             />
             -->
-        <!--
+
         <Button
-            android:id="@+id/mapButton1"
+            android:id="@+id/mButton1"
             android:layout_width="wrap_content"
             android:layout_height="37dp"
             android:layout_alignParentBottom="true"
@@ -105,10 +105,12 @@
             android:layout_marginBottom="3dp"
             android:layout_marginRight="5dp"
             android:background="#D2486F"
-            android:text="Locate" />
+            android:text="Locate"
+            android:onClick="mapButton1Clicked"
+            />
 
         <Button
-            android:id="@+id/mapButton2"
+            android:id="@+id/mButton2"
             android:layout_width="wrap_content"
             android:layout_height="37dp"
             android:layout_above="@+id/BusNo1"
@@ -116,8 +118,10 @@
             android:layout_marginBottom="3dp"
             android:layout_marginRight="5dp"
             android:background="#D2486F"
-            android:text="Locate" />
-        -->
+            android:text="Locate"
+            android:onClick="mapButton2Clicked"
+            />
+
 
     </RelativeLayout>
 

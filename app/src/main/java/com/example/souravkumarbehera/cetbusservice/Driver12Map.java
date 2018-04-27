@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -28,25 +30,90 @@ public class Driver12Map extends FragmentActivity implements OnMapReadyCallback 
     LocationManager locationManager;
     LocationListener locationListener;
     Firebase myFirebase;
+    Button online,offline;
+    int c=2;
 
+    public void mapGetOnline(View view){
+        c=1;
+        online.setVisibility(View.INVISIBLE);
+        offline.setVisibility(View.VISIBLE);
+        Toast.makeText(this, "You are online now", Toast.LENGTH_SHORT).show();
+        locationManager=(LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
+        locationListener= new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                Log.i("Location of Driver 12", location.toString());
+                LatLng driverLocation = new LatLng(location.getLatitude(), location.getLongitude());
+                mMap.clear();
+                mMap.addMarker(new MarkerOptions().position(driverLocation).title("Your Location"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(driverLocation,16));
+
+                myFirebase= new Firebase("https://cet-bus-services.firebaseio.com/Driver Bus No/12/Location");
+                Firebase childRef1= myFirebase.child("Latitude");
+                childRef1.setValue(location.getLatitude());
+                Firebase childRef2= myFirebase.child("Longitude");
+                childRef2.setValue(location.getLongitude());
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
+        //if(Build.VERSION.SDK_INT<23){
+        //  locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER,0,0,locationListener);
+        //}
+        //else{
+        if(ContextCompat.checkSelfPermission(Driver12Map.this, android.Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},1);
+        }
+        else{
+            locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER,0,0,locationListener);
+
+            Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            mMap.clear();
+            LatLng driverLocation = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(driverLocation).title("Your Location"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(driverLocation,16));
+
+            myFirebase= new Firebase("https://cet-bus-services.firebaseio.com/Driver Bus No/12/Location");
+            Firebase childRef1= myFirebase.child("Latitude");
+            childRef1.setValue(lastKnownLocation.getLatitude());
+            Firebase childRef2= myFirebase.child("Longitude");
+            childRef2.setValue(lastKnownLocation.getLongitude());
+        }
+    }
     public void goOfflineClicked(View view){
-        Intent prev =new Intent(Driver12Map.this, Driver12Page.class);
+        offline.setVisibility(View.INVISIBLE);
+        online.setVisibility(View.VISIBLE);
+        c=2;
+
         myFirebase= new Firebase("https://cet-bus-services.firebaseio.com/Driver Bus No/12/Location");
         Firebase childRef1= myFirebase.child("Latitude");
         childRef1.setValue("");
         Firebase childRef2= myFirebase.child("Longitude");
         childRef2.setValue("");
-        startActivity(prev);
+
     }
 
     @Override
     public void onBackPressed(){
-        super.onBackPressed();
-        myFirebase= new Firebase("https://cet-bus-services.firebaseio.com/Driver Bus No/12/Location");
-        Firebase childRef1= myFirebase.child("Latitude");
-        childRef1.setValue("");
-        Firebase childRef2= myFirebase.child("Longitude");
-        childRef2.setValue("");
+        if(c==2) {
+            super.onBackPressed();
+        }
+        else{
+            Toast.makeText(Driver12Map.this, "Get offline first", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -91,6 +158,9 @@ public class Driver12Map extends FragmentActivity implements OnMapReadyCallback 
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         Firebase.setAndroidContext(this);
+        online=(Button)findViewById(R.id.online);
+        offline=(Button)findViewById(R.id.offline);
+        offline.setVisibility(View.INVISIBLE);
     }
 
 
@@ -109,6 +179,7 @@ public class Driver12Map extends FragmentActivity implements OnMapReadyCallback 
 
         // Add a marker in Sydney and move the camera
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        /*
         locationManager=(LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
         locationListener= new LocationListener() {
             @Override
@@ -162,6 +233,6 @@ public class Driver12Map extends FragmentActivity implements OnMapReadyCallback 
             childRef1.setValue(lastKnownLocation.getLatitude());
             Firebase childRef2= myFirebase.child("Longitude");
             childRef2.setValue(lastKnownLocation.getLongitude());
-        }
+        }*/
     }
 }

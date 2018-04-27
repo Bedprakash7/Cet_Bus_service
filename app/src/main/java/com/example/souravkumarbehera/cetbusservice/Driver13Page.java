@@ -9,7 +9,7 @@ import android.widget.Toast;
 public class Driver13Page extends AppCompatActivity {
 
     public void goOnlineClicked(View view){
-        Toast.makeText(this, "You are Online now", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Map Loading...", Toast.LENGTH_SHORT).show();
         Intent goMap= new Intent(Driver13Page.this, Driver13Map.class);
         startActivity(goMap);
     }
