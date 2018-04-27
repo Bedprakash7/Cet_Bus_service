@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDatabase"
+    android:background="@drawable/backgroundimage"
+    >
+
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="164dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="No Time"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/routeNo1"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="120dp"
+        android:text="Route 1"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/route1Bus1"
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/Time"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@id/routeNo1"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:text="No Bus"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/route1Bus2"
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/Time"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@id/route1Bus1"
+        android:text="No Bus"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/routeNo2"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/routeNo1"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:text="Route 2"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/routeNo2"
+        android:layout_below="@id/route1Bus1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route2Bus1"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/route2Bus1"
+        android:layout_below="@id/route1Bus2"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route2Bus2"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/routeNo3"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@id/routeNo2"
+        android:text="Route 3"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/routeNo3"
+        android:layout_below="@id/route2Bus1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route3Bus1"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/route3Bus1"
+        android:layout_below="@id/route2Bus2"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route3Bus2"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/routeNo4"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@id/routeNo3"
+        android:text="Route 4"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/routeNo4"
+        android:layout_below="@id/route3Bus1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route4Bus1"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/route4Bus1"
+        android:layout_below="@id/route3Bus2"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route4Bus2"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/routeNo5"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@id/routeNo4"
+        android:text="Route 5"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/routeNo5"
+        android:layout_below="@id/route4Bus1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route5Bus1"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/route5Bus1"
+        android:layout_below="@id/route4Bus2"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route5Bus2"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/routeNo6"
+        android:layout_width="106dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@id/routeNo5"
+        android:text="Route 6"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/routeNo6"
+        android:layout_below="@id/route5Bus1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route6Bus1"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="41dp"
+        android:layout_toRightOf="@id/route6Bus1"
+        android:layout_below="@id/route5Bus2"
+        android:layout_marginTop="15dp"
+        android:id="@+id/route6Bus2"
+        android:text="No Bus"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:background="#bc7a7a"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

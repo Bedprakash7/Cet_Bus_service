@@ -1,5 +1,6 @@
 package com.example.souravkumarbehera.cetbusservice;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,11 @@ public class AdminPage extends AppCompatActivity {
     EditText busOneET,busTwoET;
     Button firstTime, secondTime, thirdTime, busOneAdd, busTwoAdd, reset, routeOne, routeTwo, routeThree, routeFour, routeFive, routeSix;
     Firebase myFirebase;
+
+    public void showDBClicked(View view){
+        Intent db= new Intent(AdminPage.this, AdminDatabase.class);
+        startActivity(db);
+    }
 
     public void firstTimeClicked (View view){
         secondTime.setVisibility(View.INVISIBLE);
@@ -913,7 +919,7 @@ public class AdminPage extends AppCompatActivity {
         routeFour = (Button)findViewById(R.id.routeFour);
         routeFive = (Button)findViewById(R.id.routeFive);
         routeSix = (Button)findViewById(R.id.routeSix);
-        showBuses = (TextView)findViewById(R.id.showBuses);
+        //showBuses = (TextView)findViewById(R.id.showBuses);
         busOneET= (EditText)findViewById(R.id.busOneET);
         busTwoET= (EditText)findViewById(R.id.busTwoET);
         busOneAdd =(Button)findViewById(R.id.busOneAdd);

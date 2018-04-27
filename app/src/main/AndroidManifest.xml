@@ -123,7 +123,8 @@
             android:label="@string/title_activity_map1" />
         <activity
             android:name=".StudentViewMap"
-            android:label="@string/title_activity_student_view_map"></activity>
+            android:label="@string/title_activity_student_view_map" />
+        <activity android:name=".AdminDatabase"></activity>
     </application>
 
 </manifest>

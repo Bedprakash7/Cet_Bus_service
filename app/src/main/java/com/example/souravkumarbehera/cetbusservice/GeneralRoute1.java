@@ -2087,15 +2087,15 @@ public class GeneralRoute1 extends AppCompatActivity {
         secondtime=parseDate(secondTime);
         thirdtime=parseDate(thirdTime);
         if(now.compareTo(firsttime)<=0 || now.compareTo(thirdtime)>0){
-            detailHeader.setText("9:30 Leaving Barmunda to Rajmahal");
+            detailHeader.setText("9:30 Leaving Barmunda to Rajmahal to CET");
             r=1;
         }
         else if(now.compareTo(secondtime)<=0 && now.compareTo(firsttime)>0){
-            detailHeader.setText("14:10 Leaving Barmunda to Rajmahal");
+            detailHeader.setText("14:10 Leaving CET to Barmunda to Rajmahal");
             r=2;
         }
         else if (now.compareTo(thirdtime)<=0 && now.compareTo(secondtime)>0){
-            detailHeader.setText("16:45 Leaving Barmunda to Rajmahal");
+            detailHeader.setText("16:45 Leaving CET to Barmunda to Rajmahal");
             r=3;
         }
         //final ArrayList<String> listOfBuses= new ArrayList<String>();

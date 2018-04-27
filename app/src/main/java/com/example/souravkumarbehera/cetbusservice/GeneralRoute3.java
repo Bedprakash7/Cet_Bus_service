@@ -2077,15 +2077,15 @@ public class GeneralRoute3 extends AppCompatActivity {
         secondtime=parseDate(secondTime);
         thirdtime=parseDate(thirdTime);
         if(now.before(firsttime) || now.after(thirdtime)){
-            detailHeader.setText("9:30 Leaving Barmunda to Cuttack");
+            detailHeader.setText("9:30 Leaving Cuttack to Barmunda to CET");
             r=1;
         }
         else if(now.before(secondtime) && now.after(firsttime)){
-            detailHeader.setText("14:10 Leaving Barmunda to Cuttack");
+            detailHeader.setText("14:10 Leaving CET to Barmunda to Cuttack");
             r=2;
         }
         else if (now.before(thirdtime) && now.after(secondtime)){
-            detailHeader.setText("16:45 Leaving Barmunda to Cuttack");
+            detailHeader.setText("16:45 Leaving CET to Barmunda to Cuttack");
             r=3;
         }
         if(r==1){

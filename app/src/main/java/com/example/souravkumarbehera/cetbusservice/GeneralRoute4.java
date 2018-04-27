@@ -2078,15 +2078,15 @@ public class GeneralRoute4 extends AppCompatActivity {
         secondtime=parseDate(secondTime);
         thirdtime=parseDate(thirdTime);
         if(now.before(firsttime) || now.after(thirdtime)){
-            detailHeader.setText("9:30 Leaving Kalinga Studio to Big Bazaar");
+            detailHeader.setText("9:30 Leaving Kalinga Studio to Big Bazaar to CET");
             r=1;
         }
         else if(now.before(secondtime) && now.after(firsttime)){
-            detailHeader.setText("14:10 Leaving Kalinga Studio to Big Bazaar");
+            detailHeader.setText("14:10 Leaving CET to Kalinga Studio to Big Bazaar");
             r=2;
         }
         else if (now.before(thirdtime) && now.after(secondtime)){
-            detailHeader.setText("16:45 Leaving Kalinga Studio to Big Bazaar");
+            detailHeader.setText("16:45 Leaving CET to Kalinga Studio to Big Bazaar");
             r=3;
         }
         if(r==1){
