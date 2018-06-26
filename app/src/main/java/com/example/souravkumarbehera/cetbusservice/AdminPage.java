@@ -17,7 +17,7 @@ import com.firebase.client.ValueEventListener;
 
 public class AdminPage extends AppCompatActivity {
 
-    String timeString="Select timing first", routeString="Select route first";
+    String timeString = "Select timing first", routeString = "Select route first";
     TextView showBuses;
     EditText busOneET,busTwoET;
     Button firstTime, secondTime, thirdTime, busOneAdd, busTwoAdd, reset, routeOne, routeTwo, routeThree, routeFour, routeFive, routeSix;

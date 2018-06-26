@@ -545,7 +545,6 @@ public class AdminDatabase extends AppCompatActivity {
         }
     }
     private Date parseDate(String date) {
-
         try {
             return simpleDateFormat.parse(date);
         } catch (java.text.ParseException e) {

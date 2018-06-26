@@ -2040,9 +2040,9 @@ public class GeneralRoute5 extends AppCompatActivity {
                     .translationYBy(-500f)
                     .scaleX(0.5f)
                     .scaleY(0.5f)
-                    .setDuration(5000);
+                    .setDuration(1000);
 
-            cat2.animate().alphaBy(1).setDuration(5000);
+            cat2.animate().alphaBy(1).setDuration(1000);
             //cat2.animate().alpha(1f).setDuration(2000);
 
 
@@ -2055,8 +2055,8 @@ public class GeneralRoute5 extends AppCompatActivity {
                     .translationYBy(1000f)
                     .scaleX(1f)
                     .scaleY(1f)
-                    .setDuration(5000);
-            cat2.animate().alpha(0).setDuration(5000);
+                    .setDuration(1000);
+            cat2.animate().alpha(0).setDuration(1000);
         }
     }
     public void getClicked(View view){
